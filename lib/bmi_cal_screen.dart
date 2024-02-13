@@ -52,7 +52,7 @@ class _BmiCalScreenState extends State<BmiCalScreen> {
                 child: GenderSelectionWidget(
                   width: width,
                   isMale: false,
-                  backgroundColor: isMale ? cardColor : backgroundColor,
+                  backgroundColor: !isMale ? cardColor : backgroundColor,
                 ),
               ),
             ],

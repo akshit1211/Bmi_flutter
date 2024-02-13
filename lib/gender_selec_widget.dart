@@ -36,7 +36,7 @@ class GenderSelectionWidget extends StatelessWidget {
         width: width * 0.45,
         height: width * 0.45,
         decoration: BoxDecoration(
-            color: cardColor,
+            color: backgroundColor,
             // color: Colors.amber,
             borderRadius: BorderRadius.circular(15)),
       ),
