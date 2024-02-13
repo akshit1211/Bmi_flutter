@@ -7,10 +7,12 @@ class GenderSelectionWidget extends StatelessWidget {
     super.key,
     required this.width,
     required this.isMale,
+    required this.backgroundColor,
   });
 
   final double width;
   final bool isMale;
+  final Color backgroundColor;
 
   @override
   Widget build(BuildContext context) {

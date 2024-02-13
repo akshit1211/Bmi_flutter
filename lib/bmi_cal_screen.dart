@@ -12,6 +12,7 @@ class BmiCalScreen extends StatefulWidget {
 }
 
 class _BmiCalScreenState extends State<BmiCalScreen> {
+  bool isMale = true;
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -32,11 +33,28 @@ class _BmiCalScreenState extends State<BmiCalScreen> {
         children: [
           Row(
             children: [
-              GenderSelectionWidget(
-                width: width,
-                isMale: true,
+              GestureDetector(
+                onTap: () => {
+                  isMale = true,
+                  setState(() {}),
+                },
+                child: GenderSelectionWidget(
+                  width: width,
+                  isMale: true,
+                  backgroundColor: isMale ? cardColor : backgroundColor,
+                ),
               ),
-              GenderSelectionWidget(width: width, isMale: false),
+              GestureDetector(
+                onTap: () => {
+                  isMale = false,
+                  setState(() {}),
+                },
+                child: GenderSelectionWidget(
+                  width: width,
+                  isMale: false,
+                  backgroundColor: isMale ? cardColor : backgroundColor,
+                ),
+              ),
             ],
           ),
         ],
